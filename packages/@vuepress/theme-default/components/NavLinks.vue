@@ -92,8 +92,8 @@ export default {
     },
 
     repoLink () {
-      const { repo } = this.$site.themeConfig
-      if (repo) {
+      const { repo, repoLabel } = this.$site.themeConfig
+      if (repo && repoLabel !== false) {
         return /^https?:/.test(repo)
           ? repo
           : `https://github.com/${repo}`
